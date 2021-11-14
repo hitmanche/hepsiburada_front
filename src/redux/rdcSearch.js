@@ -26,6 +26,7 @@ export const RdcSearch = createSlice({
       state.text = action.payload;
     },
     setPage: (state, action) => {
+      console.log(state,action)
       state.page = action.payload;
     },
   },

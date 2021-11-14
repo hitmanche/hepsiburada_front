@@ -1,8 +1,8 @@
 import variables from "./variable";
 
-export function GetProducts(text, brand, color, arrangement, page) {
+export function GetProducts(text, brand, color, arrangement) {
   return new Promise((resolve, reject) => {
-    const search = `?text=${text}&brand=${brand}&color=${color}&arrangement=${arrangement}&pageNumber=${page}`;
+    const search = `?text=${text}&brand=${brand}&color=${color}&arrangement=${arrangement}`;
     fetch(variables.baseUrl + "products" + search)
       .then((response) => {
         response

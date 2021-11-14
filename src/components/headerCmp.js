@@ -1,9 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { cardList } from "../redux/rdcCard";
 import { searchText, setText } from "../redux/rdcSearch";
 
 function HeaderCmp() {
   const sText = useSelector(searchText);
+  const cardData = useSelector(cardList)?.length;
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +26,7 @@ function HeaderCmp() {
           </div>
           <div className="hb-cart hb-25">
             <input type="button" value="Sepetim" />
-            <span>2</span>
+            <span>{cardData}</span>
           </div>
         </div>
       </div>

@@ -1,3 +1,7 @@
 module.exports = {
-  baseUrl: "https://hepsiburada-backend.herokuapp.com/",
+  baseUrl:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:3000/"
+      : "https://hepsiburada-backend.herokuapp.com/",
+    
 };
