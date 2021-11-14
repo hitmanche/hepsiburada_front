@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.scss";
+import HeaderCmp from "./components/headerCmp";
+import ProductListCmp from "./components/productListCmp";
+import SidebarCmp from "./components/sidebarCmp";
+import SubHeaderCmp from "./components/subHeaderCmp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <HeaderCmp />
+      <div className="hb-content">
+        <SubHeaderCmp />
+        <div className="hb-row">
+          <div className="hb-20">
+            <SidebarCmp />
+          </div>
+          <div className="hb-80">
+            <ProductListCmp />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
