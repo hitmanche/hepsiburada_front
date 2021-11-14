@@ -60,7 +60,7 @@ function ProductListCmp() {
   };
 
   return (
-    <>
+    <React.StrictMode>
       {console.log(lsPagination)}
       <div className="hb-row-wrap">
         {listProduct
@@ -74,7 +74,7 @@ function ProductListCmp() {
         {createButtons()}
         <button onClick={() => setPagination(lsPagination + 1)}>&#62;</button>
       </div>
-    </>
+    </React.StrictMode>
   );
 }
 

@@ -19,7 +19,7 @@ function ProductCard({ product }) {
     dispatch(addCard(product));
   };
   return (
-    <>
+    <React.StrictMode>
       <div className="hb-product-card">
         <img alt="iphone" src={product?.image} />
         <div className="hb-detail">
@@ -83,7 +83,7 @@ function ProductCard({ product }) {
           </div>
         </div>
       </div>
-    </>
+    </React.StrictMode>
   );
 }
 

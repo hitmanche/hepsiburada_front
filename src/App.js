@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
 import "./App.scss";
 import HeaderCmp from "./components/headerCmp";
 import ProductListCmp from "./components/productListCmp";
@@ -8,7 +7,7 @@ import SubHeaderCmp from "./components/subHeaderCmp";
 
 function App() {
   return (
-    <>
+    <div>
       <HeaderCmp />
       <div className="hb-content">
         <SubHeaderCmp />
@@ -21,7 +20,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
